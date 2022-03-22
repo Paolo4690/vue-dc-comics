@@ -30,7 +30,17 @@
       </div>
     </div>
     <div class="footer-social">
-      <div class="container"></div>
+      <div class="container">
+        <div class="btn-footer">SIGN-UP NOW!</div>
+        <div class="container-follow">
+          <span>FOLLOW US</span>
+          <img src="../assets/img/footer-facebook.png" alt="facebook">
+          <img src="../assets/img/footer-twitter.png" alt="twitter">
+          <img src="../assets/img/footer-youtube.png" alt="youtube">
+          <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+          <img src="../assets/img/footer-periscope.png" alt="periscope">
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -195,6 +205,30 @@ export default {
     background-image: url(../assets/img/dc-logo-bg.png);
     background-position: center;
     background-size: cover;
+  }
+}
+.footer-social {
+  background-color: $bg_social;
+  padding: 1.5rem 0;
+  .container {
+    height: 40px;
+    .btn-footer{
+      color: #fff;
+      border: 2px solid $blu_color;
+      padding: .5rem .7rem;
+      font-size: .9rem;
+      margin-right: auto;
+      cursor: pointer;
+    }
+    .container-follow {
+      display: flex;
+      align-items: center;
+      color: $blu_color;
+      font-weight: bold;
+      img {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 </style>
