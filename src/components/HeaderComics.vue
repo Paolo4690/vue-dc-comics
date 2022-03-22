@@ -6,8 +6,8 @@
       </div>
       <div class="header-menu">
         <ul>
-          <li v-for="(item, index) in headerMenu" :key="index">
-              <a :href="item.href">{{ item.text }}</a>
+          <li v-for="(item, index) in headerMenu" :key="index" :class="{active: index == activeIndex}">
+              <a :href="item.href" :class="{active: index == activeIndex}">{{ item.text }}</a>
           </li>
         </ul>
       </div>
@@ -20,6 +20,7 @@ export default {
   name: 'HeaderComics',
   data () {
     return {
+      activeIndex: 1,
       headerMenu: [
         {
           href: '#',
@@ -80,30 +81,32 @@ export default {
   }
 }
 .header-menu {
-    flex-shrink: 0;
-    height: 100px;
+  flex-shrink: 0;
+  height: 100px;
     ul {
-        display: flex;
-        align-items: center;
-        line-height: 95px;
+      display: flex;
+      align-items: center;
+      line-height: 95px;
         li:first-child {
-            margin-left: 0;
+          margin-left: 0;
         }
         li {
-            display: inline-block;
-            margin-left: 1.2rem;
-            border-bottom: 5px solid transparent;
-            transition: border-color .25s;
-            &:hover {
+          display: inline-block;
+          margin-left: 1.2rem;
+          border-bottom: 5px solid transparent;
+          transition: border-color .25s;
+            &:hover,
+            &.active {
                 border-color: $blu_color;
             }
-            a {
-                display: inline-block;
-                text-decoration: none;
-                color: $grey_color;
 
-                &:hover {
-                    color: $blu_color;
+            a {
+              display: inline-block;
+              text-decoration: none;
+              color: $grey_color;
+                &:hover,
+                &.active {
+                  color: $blu_color;
                 }
             }
         }
