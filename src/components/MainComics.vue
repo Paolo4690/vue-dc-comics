@@ -15,6 +15,11 @@
 </template>
 
 <script>
+import card1 from '../assets/img/buy-comics-digital-comics.png'
+import card2 from '../assets/img/buy-comics-merchandise.png'
+import card3 from '../assets/img/buy-comics-subscriptions.png'
+import card4 from '../assets/img/buy-comics-shop-locator.png'
+import card5 from '../assets/img/buy-dc-power-visa.svg'
 
 export default {
   name: 'MainComics',
@@ -23,23 +28,23 @@ export default {
       msg: '-->Content goes here <--',
       cardsEndMain: [
         {
-          img: '../assets/img/buy-comics-digital-comics.png',
+          img: card1,
           text: 'digitals comics'
         },
         {
-          img: '../assets/img/buy-comics-merchandise.png',
+          img: card2,
           text: 'dc merchandise'
         },
         {
-          img: '../assets/img/buy-comics-subscriptions.png',
+          img: card3,
           text: 'subscription'
         },
         {
-          img: '../assets/img/buy-comics-shop-locator.png',
+          img: card4,
           text: 'comic shop locator'
         },
         {
-          img: '../assets/img/buy-dc-power-visa.svg',
+          img: card5,
           text: 'dc power visa'
         }
       ]
@@ -76,7 +81,7 @@ export default {
       align-items: center;
       width: calc(100% / 5);
       img {
-        width: 20%;
+        width: 40px;
       }
       span {
         padding-left: .3rem;

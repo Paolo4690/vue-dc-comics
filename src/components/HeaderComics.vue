@@ -100,7 +100,7 @@ export default {
             a {
                 display: inline-block;
                 text-decoration: none;
-                color: #5c5c5c;
+                color: $grey_color;
 
                 &:hover {
                     color: $blu_color;
