@@ -66,13 +66,22 @@ export default {
   background-color: $blu_color;
   font-size: 1.3rem;
   font-weight: bold;
+  text-transform: uppercase;
   .container {
     flex: 1 0 100%;
     justify-content: space-between;
     .content-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: calc(100% / 5);
       img {
-        width: 25%;
+        width: 20%;
+      }
+      span {
+        padding-left: .3rem;
+        font-size: .8rem;
+        font-weight: normal;
       }
     }
   }
