@@ -5,6 +5,10 @@
     </div>
     <div class="end-main">
       <div class="container">
+        <div v-for="(card, index) in cardsEndMain" :key="index" class="content-card">
+          <img :src="card.img" :alt="card.text">
+          <span>{{ card.text }}</span>
+        </div>
       </div>
     </div>
   </main>
@@ -16,7 +20,29 @@ export default {
   name: 'MainComics',
   data () {
     return {
-      msg: '-->Content goes here <--'
+      msg: '-->Content goes here <--',
+      cardsEndMain: [
+        {
+          img: '../assets/img/buy-comics-digital-comics.png',
+          text: 'digitals comics'
+        },
+        {
+          img: '../assets/img/buy-comics-merchandise.png',
+          text: 'dc merchandise'
+        },
+        {
+          img: '../assets/img/buy-comics-subscriptions.png',
+          text: 'subscription'
+        },
+        {
+          img: '../assets/img/buy-comics-shop-locator.png',
+          text: 'comic shop locator'
+        },
+        {
+          img: '../assets/img/buy-dc-power-visa.svg',
+          text: 'dc power visa'
+        }
+      ]
     }
   }
 }
@@ -43,6 +69,12 @@ export default {
   .container {
     flex: 1 0 100%;
     justify-content: space-between;
+    .content-card {
+      width: calc(100% / 5);
+      img {
+        width: 25%;
+      }
+    }
   }
 }
 </style>
