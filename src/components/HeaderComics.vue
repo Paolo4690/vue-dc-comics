@@ -68,20 +68,46 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../assets/styles/partial/variables';
 .logo {
-  margin-right: auto;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
   img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin: 10px 0;
   }
 }
+.header-menu {
+    flex-shrink: 0;
+    height: 100px;
+    ul {
+        display: flex;
+        align-items: center;
+        line-height: 95px;
+        li:first-child {
+            margin-left: 0;
+        }
+        li {
+            display: inline-block;
+            margin-left: 1.2rem;
+            border-bottom: 5px solid transparent;
+            transition: border-color .25s;
+            &:hover {
+                border-color: $blu_color;
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #5c5c5c;
 
-li {
-    display: inline-block;
-    a {
-        display: inline-block;
-        text-decoration: none;
+                &:hover {
+                    color: $blu_color;
+                }
+            }
+        }
     }
 }
+
 </style>
