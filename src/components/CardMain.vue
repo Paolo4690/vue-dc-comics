@@ -1,6 +1,6 @@
 <template>
   <div class="content-book">
-    <img :src="bookImg" alt="bookTitle">
+    <img :src="bookImg" :alt="bookTitle">
     <h6>{{ bookTitle }}</h6>
   </div>
 </template>
